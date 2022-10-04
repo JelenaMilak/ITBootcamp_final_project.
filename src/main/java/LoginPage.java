@@ -63,7 +63,7 @@ public class LoginPage extends BasePage{
     private void loginClick(){
         getLoginBtn1().click();
     }
-    void login(String email, String password){
+    public void login(String email, String password){
         getEmailField().sendKeys(email);
         getPasswordField().sendKeys(password);
         getLoginBtn().click();
