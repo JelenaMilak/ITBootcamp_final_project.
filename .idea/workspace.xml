@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45e20309-96da-41d5-8ada-4409937acfa1" name="Changes" comment="Commit 3.">
-      <change afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/HomePage.java" afterDir="false" />
+    <list default="true" id="45e20309-96da-41d5-8ada-4409937acfa1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/TestPage1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/TestPage1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/LoginPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,30 +40,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.LoginTests">
-    <configuration name="LoginInvalidUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ITBootcamp_final_project." />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginInvalidUserTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginInvalidUserTest.invalidUserLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ITBootcamp_final_project." />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginInvalidUserTest" />
-      <option name="METHOD_NAME" value="invalidUserLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.LoginTests.logout">
     <configuration name="LoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
@@ -75,11 +52,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTests.ChecksInputTypesEmail" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTests.fakerLogIn" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LoginTests" />
-      <option name="METHOD_NAME" value="ChecksInputTypesEmail" />
+      <option name="METHOD_NAME" value="fakerLogIn" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -87,11 +64,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTests.isLoginUrlVisible" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTests.fakerRandomLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LoginTests" />
-      <option name="METHOD_NAME" value="isLoginUrlVisible" />
+      <option name="METHOD_NAME" value="fakerRandomLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.logout" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ITBootcamp_final_project." />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTests" />
+      <option name="METHOD_NAME" value="logout" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.wrongPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ITBootcamp_final_project." />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTests" />
+      <option name="METHOD_NAME" value="wrongPassword" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -101,11 +102,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTests.logout" />
+        <item itemvalue="TestNG.LoginTests.wrongPassword" />
+        <item itemvalue="TestNG.LoginTests.fakerRandomLogin" />
+        <item itemvalue="TestNG.LoginTests.fakerLogIn" />
         <item itemvalue="TestNG.LoginTests" />
-        <item itemvalue="TestNG.LoginTests.isLoginUrlVisible" />
-        <item itemvalue="TestNG.LoginInvalidUserTest" />
-        <item itemvalue="TestNG.LoginInvalidUserTest.invalidUserLogin" />
-        <item itemvalue="TestNG.LoginTests.ChecksInputTypesEmail" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664927792370</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit 3.">
+      <created>1664934370068</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664934370068</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -157,7 +165,7 @@
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" line="38">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" line="39">
         <watch expression="((ById)((LoginPage)this).emailField).remoteParams" language="JAVA" custom="org.openqa.selenium.By.ById,LoginPage" />
       </inline-watch>
     </watches-manager>

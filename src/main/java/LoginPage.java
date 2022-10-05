@@ -1,3 +1,4 @@
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +12,7 @@ public class LoginPage extends BasePage{
     private By emailField = By.xpath("//*[@id='email']");
     private By passwordField = By.xpath("//*[@id='password']");
     private By singUpBtn = By.xpath("//*[@id='app']/div[1]/div/header/div/div[3]/a[4]");
-
+    Faker faker =new Faker();
     public LoginPage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
     }
@@ -74,6 +75,29 @@ public class LoginPage extends BasePage{
     public void waitUrlLogin(){
         getDriverWait().until(ExpectedConditions.urlContains("/login"));
     }
+   public Faker getFaker(){
+        return faker;
+    }
+    public void fakeLogin(){
+        String email = faker.internet().emailAddress();
+        String password = faker.internet().password();
+        getEmailField().click();
+        getEmailField().sendKeys(email);
+        getPasswordField().click();
+        getPasswordField().sendKeys(password);
+        getLoginBtn().click();
+
+
+    }
+    public void wrongPassword( String pass){
+        getEmailField().sendKeys("admin@admin.com");
+        getPasswordField().sendKeys(pass);
+        if( pass !="12345"){
+            getLoginBtn().click();
+        }
+    }
+
+
 
 
 }
