@@ -130,7 +130,7 @@ public class LoginTests {
           page reports /login route (open with driver.get home page and check
           does it redirect you to login)
     */
-    @Test
+    @Test (priority = 9)
     protected  void logout (){
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "12345");
