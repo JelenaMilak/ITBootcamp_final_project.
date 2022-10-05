@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class TestPage1 {
+public class LoginTests {
     private LoginPage loginPage;
     private WebDriver driver;
     private WebDriverWait wait;
@@ -67,6 +67,7 @@ public class TestPage1 {
     @Test(priority = 4)
     public void loginTestWithValidCredentials() {
         String expectedResult = "My Awesome App";
+
         loginPage.getLoginBtn1().click();
 
         loginPage.login("admin@admin.com", "12345");
@@ -76,6 +77,18 @@ public class TestPage1 {
         String actualResult = loginPage.getDriver().getTitle();
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
+
+    ////Verify that the route/home appears in the url of the home page
+    @Test(priority = 6)
+    public void isHomeUrlVisible() {
+
+        String expectedResult = "https://vue-demo.daniel-avellaneda.com/home";
+        String actualResult = loginPage.getDriver().getCurrentUrl();
+        Assert.assertTrue(actualResult.endsWith("/home"));
+    }
+
+
+
 
 
 
