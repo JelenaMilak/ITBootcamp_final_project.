@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SingUpPage extends BasePage{
+    private By importantBox = By.xpath("//*[@id='app']/div[4]/div/div");
     private By emailMessageBox = By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[3]/div/div/div/div/div[1]/ul/li");
     private By name = By.id("name");
     private By email = By.id("email");
@@ -14,6 +15,14 @@ public class SingUpPage extends BasePage{
     Faker faker = new Faker();
     public SingUpPage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
+    }
+
+    public WebElement getImportantBox() {
+        return getDriver().findElement(importantBox);
+    }
+
+    public void setImportantBox(By importantBox) {
+        this.importantBox = importantBox;
     }
 
     public WebElement getEmailMessageBox() {
@@ -47,6 +56,7 @@ public class SingUpPage extends BasePage{
     public WebElement getSingBtn() {
         return getDriver().findElement(singBtn);
     }
+
 
     public void setName(By name) {
         this.name = name;
@@ -92,5 +102,12 @@ public class SingUpPage extends BasePage{
     public boolean isEmailMessageBoxPresent(){
         return getEmailMessageBox().isDisplayed();
 
+    }
+    public void SingUpVerification(String name, String email, String password, String confirmpassword){
+        getName().sendKeys("Milakovic");
+        getEmail().sendKeys("milakovic@itbootcamp.rs");
+        getPassword().sendKeys("123456");
+        getConfirmPassword().sendKeys("123456");
+        getSingBtn().click();
     }
 }

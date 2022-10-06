@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -88,9 +89,27 @@ public class SingUpTest {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
-
         }
-
-
     }
+    @Test
+    protected void SingUpVerification(){
+        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        HomePage.getSingUpBtn().click();
+        singUpPage.SingUp();
+        driver.navigate().refresh();
+        singUpPage.SingUpVerification("Milakovic","milakovic@itbootcamp.rs","123456","123456");
+
+        WebElement importantBox= driver.findElement(By.xpath("//*[@id='app']/div[4]/div/div/div[1]"));
+        String expectedResult="IMPORTANT: Verify your account";
+        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+
+     Assert.assertTrue(importantBox.getText().contains(expectedResult));
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
 }

@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45e20309-96da-41d5-8ada-4409937acfa1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/SingUpTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/SingUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/SingUpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/LoginTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/SingUpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/SingUpTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,21 +35,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.SingUpTest.AlreadyUser">
-    <configuration name="LoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ITBootcamp_final_project." />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.SingUpTest.SingUpVerification">
     <configuration name="SingUpTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
@@ -101,13 +87,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SingUpTest.SingUpVerification" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ITBootcamp_final_project." />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SingUpTest" />
+      <option name="METHOD_NAME" value="SingUpVerification" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SingUpTest.SingUpVerification" />
         <item itemvalue="TestNG.SingUpTest.AlreadyUser" />
         <item itemvalue="TestNG.SingUpTest" />
         <item itemvalue="TestNG.SingUpTest.CheckInputType" />
-        <item itemvalue="TestNG.SingUpTest.SingUp" />
-        <item itemvalue="TestNG.LoginTests" />
+        <item itemvalue="TestNG.SingUpTest.SingUpTest" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665008567790</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Commit 5.">
+      <created>1665018287804</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665018287804</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -191,7 +196,8 @@
     <MESSAGE value="Second Commit" />
     <MESSAGE value="Commit 3." />
     <MESSAGE value="Commit 4." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 4." />
+    <MESSAGE value="Commit 5." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 5." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
