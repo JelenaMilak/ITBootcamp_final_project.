@@ -32,6 +32,7 @@ public class LoginTests {
         Faker faker = new Faker();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+
         loginPage = new LoginPage(driver, wait);
         homePage = new HomePage(driver,wait);
 
@@ -47,9 +48,11 @@ public class LoginTests {
     @Test(priority = 1)
     public void isLoginUrlVisible() {
         wait.until(ExpectedConditions.elementToBeClickable(loginPage.getLoginBtn1()));
+
         loginPage.getLoginBtn1().click(); //Click on login button in the heder.
         String expectedResult = "https://vue-demo.daniel-avellaneda.com/login";
         String actualResult = loginPage.getDriver().getCurrentUrl();
+
         Assert.assertTrue(actualResult.endsWith("/login"));
     }
 
@@ -77,8 +80,10 @@ public class LoginTests {
     protected void loginTestWithValidCredentials() {
         String expectedResult = "My Awesome App";
         loginPage.getLoginBtn1().click();
+
         loginPage.login("admin@admin.com", "12345");
         loginPage.getLoginBtn().click();
+
         loginPage.waitUrl();
         String actualResult = loginPage.getDriver().getTitle();
         Assert.assertTrue(actualResult.contains(expectedResult));
@@ -105,37 +110,48 @@ public class LoginTests {
         }
         WebElement closeBox = driver.findElement(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[4]/div/div/div/div"));
         WebElement closeBtn = driver.findElement(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[4]/div/div/div/div/div[1]/button"));
+
         String expectedResult = "User does not exists";
         Assert.assertTrue(closeBox.getText().contains(expectedResult));
+
         String actualResult = loginPage.getDriver().getCurrentUrl();
         Assert.assertTrue(actualResult.endsWith("/login"));
-        closeBtn.click();
 
-    }// Displays errors when password is wrong
+        closeBtn.click();
+    }
+
+    // Displays errors when password is wrong
     @Test( priority = 8)
     protected void wrongPassword (){
         loginPage.getLoginBtn1().click();
         loginPage.wrongPassword("789456");
+
         WebElement closeBox = driver.findElement(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[4]/div/div/div/div"));
         WebElement closeBtn = driver.findElement(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[4]/div/div/div/div/div[1]/button"));
+
         String expectedResult = "Wrong password";
         Assert.assertTrue(closeBox.getText().contains(expectedResult));
+
         String actualResult = loginPage.getDriver().getCurrentUrl();
         Assert.assertTrue(actualResult.endsWith("/login"));
         closeBtn.click();
     }
+
     /*  1.Verify that the logout button is visible on the page,
         2.Verify that the /login route appears in the url of the page,
         3.Verify that after trying to open the /home route, in the url
           page reports /login route (open with driver.get home page and check
           does it redirect you to login)
     */
+
     @Test (priority = 9)
     protected  void logout (){
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "12345");
-        Assert.assertTrue(homePage.isLogoutBtnPresent());
         loginPage.getLoginBtn().click();
+
+        Assert.assertTrue(homePage.isLogoutBtnPresent());
+
         String actualResult = loginPage.getDriver().getCurrentUrl();
         Assert.assertTrue(actualResult.endsWith("/login"));
 
