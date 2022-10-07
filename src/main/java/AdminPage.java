@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AdminPage extends BasePage {
+    private By editBitn = By.xpath("//*[@id='edit']/span");
     private By saveBtn = By.xpath("//*[@id='app']/div[5]/div/div/div[3]/button[2]");
     private By newItem = By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div[1]/div[1]/div[3]/form/div[1]/button/span");
     private By cityName = By.xpath("//*[@id='name']");
@@ -17,6 +18,7 @@ public class AdminPage extends BasePage {
     public AdminPage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
     }
+    public 
 
     public WebElement getSaveBtn() {
         return getDriver().findElement(saveBtn);
