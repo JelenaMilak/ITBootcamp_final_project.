@@ -1,54 +1,18 @@
-import com.github.javafaker.Faker;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import javax.lang.model.element.Element;
 import java.time.Duration;
 
-public class SingUpTest {
-    private SingUpPage singUpPage;
-    private WebDriverWait wait;
-    private WebDriver driver;
-    private HomePage HomePage;
-    private Element element;
-
-
-    @BeforeClass
-    public void setup() {
-        System.setProperty("webdriver.chrome.driver", "../chromedriver.exe");
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-        driver.get("https://vue-demo.daniel-avellaneda.com");
-
-        driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-        singUpPage = new SingUpPage(driver, wait);
-        HomePage = new HomePage(driver, wait);
-        Faker faker = new Faker();
-
-    }
-
-    @AfterClass
-    public void afterClass() {
-        driver.quit();
-    }
+public class SingUpTests extends BaseTest {
 
     // Verify that the /signup route appears in the url of the page, and singUp.
 
     @Test(priority = 1)
     public void SingUp() {
-        HomePage.getSingUpBtn().click();
+        homePage.getSingUpBtn().click();
         singUpPage.SingUp();
         String actualResult = singUpPage.getDriver().getCurrentUrl();
         Assert.assertTrue(actualResult.endsWith("/signup"));
@@ -57,7 +21,7 @@ public class SingUpTest {
 
     @Test(priority = 2)
     protected void CheckInputType() {
-        HomePage.getSingUpBtn().click();
+        homePage.getSingUpBtn().click();
         singUpPage.SingUp();
 
         String actualResult1 = "email";
@@ -74,7 +38,7 @@ public class SingUpTest {
     @Test
     protected void AlreadyUser() {
 
-        HomePage.getSingUpBtn().click();
+        homePage.getSingUpBtn().click();
         singUpPage.SingUp();
         driver.navigate().refresh();
         singUpPage.AlreadyUser("Test Test", "admin@admin.com", "123654", "123654");
@@ -94,22 +58,31 @@ public class SingUpTest {
     @Test
     protected void SingUpVerification(){
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-        HomePage.getSingUpBtn().click();
+        homePage.getSingUpBtn().click();
         singUpPage.SingUp();
         driver.navigate().refresh();
-        singUpPage.SingUpVerification("Milakovic","milakovic@itbootcamp.rs","123456","123456");
+        singUpPage.SingUpfakerVerification("name","email","password","password");
 
         WebElement importantBox= driver.findElement(By.xpath("//*[@id='app']/div[4]/div/div/div[1]"));
         String expectedResult="IMPORTANT: Verify your account";
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 
-     Assert.assertTrue(importantBox.getText().contains(expectedResult));
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        Assert.assertTrue(importantBox.getText().contains(expectedResult));
+        singUpPage.getCloseBtn().click();
+
     }
+    @Test
+    public void EditProfile (){
+        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        homePage.getSingUpBtn().click();
+        singUpPage.SingUp();
+        driver.navigate().refresh();
+        singUpPage.SingUpfakerVerification("name","email","password","password");
+        singUpPage.getCloseBtn().click();
+
+
+    }
+
 
 
 }

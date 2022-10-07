@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SingUpPage extends BasePage{
+    private By closeBtn = By.xpath("//*[@id='app']/div[4]/div/div/div[3]/button/span");
     private By importantBox = By.xpath("//*[@id='app']/div[4]/div/div");
     private By emailMessageBox = By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[3]/div/div/div/div/div[1]/ul/li");
     private By name = By.id("name");
@@ -12,9 +13,20 @@ public class SingUpPage extends BasePage{
     private By password = By.id("password");
     private By confirmPassword = By.id("confirmPassword");
     private By singBtn = By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[2]/span/form/div/div[5]/button/span");
+    private By sinbBtnDown = By.xpath("//<button type='submit'class='v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default secondary'><span class='v-btn__content'>Sign me up</span></button>");
+    //<button type="submit" class="v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default secondary"><span class="v-btn__content">Sign me up</span></button>
+    //<button type="submit" class="v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default secondary"><span class="v-btn__content">Sign me up</span></button>
     Faker faker = new Faker();
     public SingUpPage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
+    }
+
+    public WebElement getCloseBtn() {
+        return getDriver().findElement(closeBtn);
+    }
+
+    public WebElement getSinbBtnDown() {
+        return getDriver().findElement(sinbBtnDown);
     }
 
     public WebElement getImportantBox() {
@@ -103,11 +115,18 @@ public class SingUpPage extends BasePage{
         return getEmailMessageBox().isDisplayed();
 
     }
-    public void SingUpVerification(String name, String email, String password, String confirmpassword){
-        getName().sendKeys("Milakovic");
-        getEmail().sendKeys("milakovic@itbootcamp.rs");
-        getPassword().sendKeys("123456");
-        getConfirmPassword().sendKeys("123456");
+    public void SingUpfakerVerification(String name, String email, String password, String confirmpassword){
+        email = faker.internet().emailAddress();
+        password = faker.internet().password();
+        name = faker.internet().domainName();
+        getName().click();
+        getName().sendKeys(name);
+        getEmail().click();
+        getEmail().sendKeys(email);
+        getPassword().click();
+        getPassword().sendKeys(password);
+        getConfirmPassword().click();
+        getConfirmPassword().sendKeys(password);
         getSingBtn().click();
     }
 }

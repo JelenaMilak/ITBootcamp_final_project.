@@ -6,7 +6,10 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public class LoginPage extends BasePage{
+    private By logoutBtn = By.xpath("//*[@id='app']/div[1]/div/header/div/div[3]/button[2]");
     private By loginBtn = By.xpath("//*[@id='app']/div/main/div/div[2]/div/div/div[3]/span/form/div/div[3]/button");
     private By loginBtn1 = By.xpath("//*[@id='app']/div[1]/div/header/div/div[3]/a[3]");
     private By emailField = By.xpath("//*[@id='email']");
@@ -17,6 +20,9 @@ public class LoginPage extends BasePage{
         super(driver, driverWait);
     }
 
+    public WebElement getLogoutBtn() {
+        return getDriver().findElement(logoutBtn);
+    }
 
     public WebElement getLoginBtn1() {
         return getDriver().findElement(loginBtn1);
@@ -96,6 +102,15 @@ public class LoginPage extends BasePage{
             getLoginBtn().click();
         }
     }
+    public void checkLogout() {
+        List<WebElement> lista = getDriver().findElements(logoutBtn);
+        if (lista.size() != 0) {
+            getLogoutBtn().click();
+        }
+    }
+
+
+
 
 
 

@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45e20309-96da-41d5-8ada-4409937acfa1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/AdminPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/Dashboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/ProfilePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AdminTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LocaleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/ProfileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/SingUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/SingUpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/SingUpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/SingUpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/SingUpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/SingUpTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/LoginTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +52,11 @@
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.SingUpTest.SingUpVerification">
-    <configuration name="SingUpTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ProfileTest.editProfileTest">
+    <configuration name="ProfileTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SingUpTest" />
+      <option name="MAIN_CLASS_NAME" value="ProfileTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -51,10 +64,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingUpTest.AlreadyUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileTest.editProfileTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SingUpTest" />
+      <option name="MAIN_CLASS_NAME" value="ProfileTest" />
+      <option name="METHOD_NAME" value="editProfileTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingUpTests.AlreadyUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ITBootcamp_final_project." />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SingUpTests" />
       <option name="METHOD_NAME" value="AlreadyUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -63,11 +88,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingUpTest.CheckInputType" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SingUpTests.EditProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SingUpTest" />
-      <option name="METHOD_NAME" value="CheckInputType" />
+      <option name="MAIN_CLASS_NAME" value="SingUpTests" />
+      <option name="METHOD_NAME" value="EditProfile" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -75,22 +100,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingUpTest.SingUp" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SingUpTests.SingUpVerification" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SingUpTest" />
-      <option name="METHOD_NAME" value="SingUp" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SingUpTest.SingUpVerification" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ITBootcamp_final_project." />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SingUpTest" />
+      <option name="MAIN_CLASS_NAME" value="SingUpTests" />
       <option name="METHOD_NAME" value="SingUpVerification" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -101,11 +114,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SingUpTest.SingUpVerification" />
-        <item itemvalue="TestNG.SingUpTest.AlreadyUser" />
-        <item itemvalue="TestNG.SingUpTest" />
-        <item itemvalue="TestNG.SingUpTest.CheckInputType" />
-        <item itemvalue="TestNG.SingUpTest.SingUpTest" />
+        <item itemvalue="TestNG.ProfileTest.editProfileTest" />
+        <item itemvalue="TestNG.ProfileTest" />
+        <item itemvalue="TestNG.SingUpTests.EditProfile" />
+        <item itemvalue="TestNG.SingUpTests.SingUpVerification" />
+        <item itemvalue="TestNG.SingUpTests.AlreadyUser" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665018287804</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Commit 6.">
+      <created>1665023280519</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665023280519</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -197,11 +217,12 @@
     <MESSAGE value="Commit 3." />
     <MESSAGE value="Commit 4." />
     <MESSAGE value="Commit 5." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 5." />
+    <MESSAGE value="Commit 6." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 6." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" line="39">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" line="45">
         <watch expression="((ById)((LoginPage)this).emailField).remoteParams" language="JAVA" custom="org.openqa.selenium.By.ById,LoginPage" />
       </inline-watch>
     </watches-manager>
