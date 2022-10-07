@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45e20309-96da-41d5-8ada-4409937acfa1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/AdminPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/ProfilePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/SingUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/SingUpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AdminTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AdminTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/LoginTests.class" afterDir="false" />
-    </list>
+    <list default="true" id="45e20309-96da-41d5-8ada-4409937acfa1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -221,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665165637982</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Commit 9.">
+      <created>1665183714116</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665183714116</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Commit 10.">
+      <created>1665183737717</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1665183737717</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -234,7 +239,8 @@
     <MESSAGE value="Commit 7." />
     <MESSAGE value="Commit 8." />
     <MESSAGE value="Commit 9." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 9." />
+    <MESSAGE value="Commit 10." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 10." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
