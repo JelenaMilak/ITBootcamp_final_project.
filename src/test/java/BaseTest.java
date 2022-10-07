@@ -13,15 +13,14 @@ import java.time.Duration;
 import java.util.List;
 
 public class BaseTest {
-   protected LoginPage loginPage;
+    protected LoginPage loginPage;
     protected WebDriver driver;
-   protected WebDriverWait wait;
-   protected HomePage homePage;
-   protected SingUpPage singUpPage;
-   protected AdminPage adminPage;
-   protected Dashboard dashboard;
-   protected ProfilePage profilePage;
-
+    protected WebDriverWait wait;
+    protected HomePage homePage;
+    protected SingUpPage singUpPage;
+    protected AdminPage adminPage;
+    protected Dashboard dashboard;
+    protected ProfilePage profilePage;
 
 
     @BeforeClass
@@ -37,20 +36,21 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 
         loginPage = new LoginPage(driver, wait);
-        homePage = new HomePage(driver,wait);
-        singUpPage = new SingUpPage(driver,wait);
-        adminPage = new AdminPage(driver,wait);
-        dashboard = new Dashboard(driver,wait);
-        profilePage = new ProfilePage(driver,wait);
+        homePage = new HomePage(driver, wait);
+        singUpPage = new SingUpPage(driver, wait);
+        adminPage = new AdminPage(driver, wait);
+        dashboard = new Dashboard(driver, wait);
+        profilePage = new ProfilePage(driver, wait);
     }
-    @BeforeMethod
-    public void beforeMethod(){
 
+    @BeforeMethod
+    public void beforeMethod() {
+        driver.get("https://vue-demo.daniel-avellaneda.com");
         driver.manage().deleteAllCookies();
     }
 
     @AfterMethod
-    public void afterMethod(){
+    public void afterMethod() {
 
     }
 

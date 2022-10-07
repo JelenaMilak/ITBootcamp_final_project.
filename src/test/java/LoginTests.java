@@ -11,7 +11,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-
 public class LoginTests extends BaseTest {
 
 
@@ -31,19 +30,19 @@ public class LoginTests extends BaseTest {
     //Verify that the email input field for the type attribute has a value e-mail.
 
     @Test
-    public void ChecksInputTypesEmail () throws InterruptedException{
+    public void ChecksInputTypesEmail() throws InterruptedException {
         String actualResult = "email";
         String expectedResult = loginPage.getEmailField().getAttribute("type");
-        Assert.assertEquals(actualResult,expectedResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
     //Verify that the password input field for the type attribute has a value password
 
     @Test
-    protected void ChecksInputTypesPassword () throws InterruptedException{
+    protected void ChecksInputTypesPassword() throws InterruptedException {
         String actualResult = "password";
         String expectedResult = loginPage.getPasswordField().getAttribute("type");
-        Assert.assertEquals(actualResult,expectedResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
     //Verify if the user can log in with valid data
@@ -80,7 +79,8 @@ public class LoginTests extends BaseTest {
 
     // Displays errors when user does not exist
     @Test
-    protected void fakerRandomLogin(){
+
+    protected void fakerRandomLogin() {
         wait.until(ExpectedConditions.elementToBeClickable(loginPage.getLoginBtn1()));
         loginPage.getLoginBtn1().click();
         loginPage.fakeLogin();
@@ -100,7 +100,7 @@ public class LoginTests extends BaseTest {
 
     // Displays errors when password is wrong
     @Test
-    protected void wrongPassword (){
+    protected void wrongPassword() {
 
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "121233");
@@ -128,7 +128,7 @@ public class LoginTests extends BaseTest {
     */
 
     @Test
-    protected  void logout (){
+    protected void logout() {
         wait.until(ExpectedConditions.elementToBeClickable(loginPage.getLoginBtn1()));
         loginPage.getLoginBtn1().click();
         wait.until(ExpectedConditions.elementToBeClickable(loginPage.getLoginBtn()));
@@ -142,7 +142,6 @@ public class LoginTests extends BaseTest {
 
 
     }
-
 
 
 }

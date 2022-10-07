@@ -18,7 +18,9 @@ public class AdminPage extends BasePage {
     public AdminPage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
     }
-    public 
+    public WebElement getEditBtn (){
+        return getDriver().findElement(editBitn);
+    }
 
     public WebElement getSaveBtn() {
         return getDriver().findElement(saveBtn);

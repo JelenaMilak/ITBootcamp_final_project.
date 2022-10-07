@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SingUpPage extends BasePage{
+public class SingUpPage extends BasePage {
     private By closeBtn = By.xpath("//*[@id='app']/div[4]/div/div/div[3]/button/span");
     private By importantBox = By.xpath("//*[@id='app']/div[4]/div/div");
     private By emailMessageBox = By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[3]/div/div/div/div/div[1]/ul/li");
@@ -14,9 +14,9 @@ public class SingUpPage extends BasePage{
     private By confirmPassword = By.id("confirmPassword");
     private By singBtn = By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[2]/span/form/div/div[5]/button/span");
     private By sinbBtnDown = By.xpath("//<button type='submit'class='v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default secondary'><span class='v-btn__content'>Sign me up</span></button>");
-    //<button type="submit" class="v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default secondary"><span class="v-btn__content">Sign me up</span></button>
-    //<button type="submit" class="v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default secondary"><span class="v-btn__content">Sign me up</span></button>
+
     Faker faker = new Faker();
+
     public SingUpPage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
     }
@@ -89,7 +89,8 @@ public class SingUpPage extends BasePage{
     public void setSingBtn(By singBtn) {
         this.singBtn = singBtn;
     }
-    public void SingUp(){
+
+    public void SingUp() {
         String name = faker.internet().domainName();
         String email = faker.internet().emailAddress();
         String password = faker.internet().password();
@@ -103,7 +104,8 @@ public class SingUpPage extends BasePage{
         getConfirmPassword().sendKeys(password);
         getSingBtn();
     }
-    public void AlreadyUser(String name, String email, String password, String confirmpassword){
+
+    public void AlreadyUser(String name, String email, String password, String confirmpassword) {
         getName().sendKeys("Test Test");
         getEmail().sendKeys("admin@admin.com");
         getPassword().sendKeys("123654");
@@ -111,11 +113,13 @@ public class SingUpPage extends BasePage{
         getSingBtn().click();
 
     }
-    public boolean isEmailMessageBoxPresent(){
+
+    public boolean isEmailMessageBoxPresent() {
         return getEmailMessageBox().isDisplayed();
 
     }
-    public void SingUpfakerVerification(String name, String email, String password, String confirmpassword){
+
+    public void SingUpfakerVerification(String name, String email, String password, String confirmpassword) {
         email = faker.internet().emailAddress();
         password = faker.internet().password();
         name = faker.internet().domainName();

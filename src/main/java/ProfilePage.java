@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ProfilePage extends BasePage {
     Faker faker = new Faker();
     private By cityManu = By.xpath("//*[@id='list-item-162-6']/div");
-    private By email = By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[2]/span/form/div/div/div[1]");
+    private By email = By.xpath("//*[@id='app']/div[4]/div/div/div[3]/button[2]");
     private By name = By.xpath("//*[@id='name']");
     private By phone = By.xpath("//*[@id='phone']");
     private By city = By.xpath("//*[@id='city']");
