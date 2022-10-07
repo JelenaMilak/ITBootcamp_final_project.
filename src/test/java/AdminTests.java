@@ -58,8 +58,8 @@ public class AdminTests extends BaseTest {
         WebElement myCity = driver.findElement(By.xpath("//*[@id='app']/div[5]/div/div/div[3]/button[2]/span"));
 
         WebElement editMyCity = driver.findElement(By.xpath("//*[@id='name']"));
-        //editMyCity.click();
-        //editMyCity.clear();
+        editMyCity.click();
+        editMyCity.clear();
         editMyCity.sendKeys("opop");
         wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div[3]/div/div/div/div/div[1]"),
                 "Saved successfully\nCLOSE"));
