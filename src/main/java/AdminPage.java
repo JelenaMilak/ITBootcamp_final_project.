@@ -4,8 +4,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AdminPage extends BasePage {
+
+    private By myCity = (By.xpath("//*[@id='app']/div[5]/div/div/div[3]/button[2]/span"));
+
+    private By search = By.id("search");
     private By editBitn = By.xpath("//*[@id='edit']/span");
-    private By saveBtn = By.xpath("//*[@id='app']/div[5]/div/div/div[3]/button[2]");
+    private By saveBtn = By.xpath("/html/body/div/div[5]/div/div/div[3]/button[2]");
     private By newItem = By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div[1]/div[1]/div[3]/form/div[1]/button/span");
     private By cityName = By.xpath("//*[@id='name']");
     private By adminBtn = By.xpath("//*[@id='app']/div[1]/div/header/div/div[3]/a[1]");
@@ -18,7 +22,12 @@ public class AdminPage extends BasePage {
     public AdminPage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
     }
-    public WebElement getEditBtn (){
+
+    public WebElement getMyCity() {
+        return getDriver().findElement(myCity);
+    }
+
+    public WebElement getEditBtn() {
         return getDriver().findElement(editBitn);
     }
 
@@ -65,8 +74,17 @@ public class AdminPage extends BasePage {
     public WebElement getRightArrow() {
         return getDriver().findElement(rightArrow);
     }
-    public void setCityName(String cityName){
-        cityName="Jelena";
+
+    public WebElement getSearch() {
+        return getDriver().findElement(search);
     }
+
+    public void searchCity() {
+        getSearch().click();
+        getSearch().sendKeys("Morinj editedhophop");
+
+
+    }
+
 
 }

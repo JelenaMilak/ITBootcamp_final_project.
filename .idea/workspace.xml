@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45e20309-96da-41d5-8ada-4409937acfa1" name="Changes" comment="" />
+    <list default="true" id="45e20309-96da-41d5-8ada-4409937acfa1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/AdminPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AdminTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AdminTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/AdminPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/AdminPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/AdminTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/AdminTests.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,11 +65,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminTests.enterAdminPage" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminTests.newCity" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AdminTests" />
-      <option name="METHOD_NAME" value="enterAdminPage" />
+      <option name="METHOD_NAME" value="newCity" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -71,11 +77,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminTests.newCity" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminTests.searchCity" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AdminTests" />
-      <option name="METHOD_NAME" value="newCity" />
+      <option name="METHOD_NAME" value="searchCity" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -98,10 +104,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.AdminTests.editCity" />
+        <item itemvalue="TestNG.AdminTests.searchCity" />
         <item itemvalue="TestNG.AdminTests.newCity" />
         <item itemvalue="TestNG.ProfileTest.editProfileTest" />
         <item itemvalue="TestNG.AdminTests" />
-        <item itemvalue="TestNG.AdminTests.enterAdminPage" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +232,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665183737717</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Commit 10.">
+      <created>1665183807014</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1665183807014</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Commit 10.">
+      <created>1665183973783</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1665183973783</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -241,6 +261,7 @@
     <MESSAGE value="Commit 9." />
     <MESSAGE value="Commit 10." />
     <option name="LAST_COMMIT_MESSAGE" value="Commit 10." />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -248,5 +269,8 @@
         <watch expression="((ById)((LoginPage)this).emailField).remoteParams" language="JAVA" custom="org.openqa.selenium.By.ById,LoginPage" />
       </inline-watch>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ITBootcamp_final_project_$AdminTests_editCity.ic" NAME="AdminTests.editCity Coverage Results" MODIFIED="1665264981237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
