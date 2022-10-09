@@ -116,34 +116,28 @@ public class ProfilePage extends BasePage {
         twiter = faker.internet().url();
         gitHub = faker.internet().url();
 
-
-
         getName().click();
         getName().sendKeys(name);
         Thread.sleep(5000);
-
 
         getPhone().click();
         getPhone().sendKeys(phone);
         Thread.sleep(5000);
 
         getArrow().click();
-        //getCity().click();
         getCityManu().click();
-        //getCity().sendKeys();
         Thread.sleep(5000);
-
 
         getContry().click();
         getContry().sendKeys(contry);
         Thread.sleep(5000);
 
         getTwiter().click();
-        getTwiter().sendKeys("https://"+ twiter);
+        getTwiter().sendKeys("https://" + twiter);
         Thread.sleep(5000);
 
         getGitHub().click();
-        getGitHub().sendKeys("https://"+gitHub);
+        getGitHub().sendKeys("https://" + gitHub);
         Thread.sleep(5000);
 
         getSaveBtn().click();

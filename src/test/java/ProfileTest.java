@@ -28,9 +28,5 @@ public class ProfileTest extends BaseTest{
         Assert.assertTrue(succMsg.getText().contains(expectedResult));
 
 
-
-
-
-
     }
 }
