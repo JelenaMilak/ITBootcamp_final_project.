@@ -5,7 +5,7 @@ public class AuthRouthTests extends BaseTest {
 
 
     @Test
-    public void visitsToHome() {
+    public void visitsToHomeUrl() {
         String expectedResult = "/login";
         driver.get("https://vue-demo.daniel-avellaneda.com/home");
         String actualResult = driver.getCurrentUrl();
@@ -13,7 +13,7 @@ public class AuthRouthTests extends BaseTest {
     }
 
     @Test
-    public void visitsToProfile() {
+    public void visitsToProfileUrl() {
         String expectedResult = "/login";
         driver.get("https://vue-demo.daniel-avellaneda.com/profile");
         String actualResult = driver.getCurrentUrl();
@@ -21,7 +21,7 @@ public class AuthRouthTests extends BaseTest {
     }
 
     @Test
-    public void visitsToAdminCities() {
+    public void visitsToAdminCitiesUrl() {
         String expectedResult = "/login";
         driver.get("https://vue-demo.daniel-avellaneda.com/admin/cities");
         String actualResult = driver.getCurrentUrl();
@@ -29,7 +29,7 @@ public class AuthRouthTests extends BaseTest {
     }
 
     @Test
-    public void visitsToAdminUsers() {
+    public void visitsToAdminUsersUrl() {
         String expectedResult = "/login";
         driver.get("https://vue-demo.daniel-avellaneda.com/admin/users");
         String actualResult = driver.getCurrentUrl();
