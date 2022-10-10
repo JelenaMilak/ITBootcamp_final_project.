@@ -1,16 +1,15 @@
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import java.time.Duration;
 
-public class SingUpTests extends BaseTest {
+public class SignUpTests extends BaseTest {
 
     // Verify that the /signup route appears in the url of the page, and singUp.
 
-    @Test(priority = 1)
+    @Test
     public void SingUp() {
         homePage.getSingUpBtn().click();
         singUpPage.SingUp();
@@ -19,7 +18,7 @@ public class SingUpTests extends BaseTest {
 
     }
 
-    @Test(priority = 2)
+    @Test
     protected void CheckInputType() {
         homePage.getSingUpBtn().click();
         singUpPage.SingUp();
@@ -49,40 +48,27 @@ public class SingUpTests extends BaseTest {
         String expectedResult = "E-mail already exists";
         Assert.assertTrue(closeBox.getText().contains(expectedResult));
         closeBox.click();
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+
     }
+
     @Test
-    protected void SingUpVerification(){
-        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+    protected void singUpVerification() {
+
         homePage.getSingUpBtn().click();
         singUpPage.SingUp();
         driver.navigate().refresh();
-        singUpPage.SingUpfakerVerification("name","email","password","password");
+        singUpPage.SingUpfakerVerification("name", "email", "password", "password");
 
-        WebElement importantBox= driver.findElement(By.xpath("//*[@id='app']/div[4]/div/div/div[1]"));
-        String expectedResult="IMPORTANT: Verify your account";
-        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        wait.until(ExpectedConditions.visibilityOf(singUpPage.getImportantBox()));
+        wait.until(ExpectedConditions.textToBe(By.xpath("/html/body/div/div[4]/div/div/div[1]"),
+                "IMPORTANT: Verify your account"));
+
+        WebElement importantBox = driver.findElement(By.xpath("/html/body/div/div[4]/div/div/div[1]"));
+        String expectedResult = "IMPORTANT: Verify your account";
 
         Assert.assertTrue(importantBox.getText().contains(expectedResult));
         singUpPage.getCloseBtn().click();
 
     }
-    @Test
-    public void EditProfile (){
-        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-        homePage.getSingUpBtn().click();
-        singUpPage.SingUp();
-        driver.navigate().refresh();
-        singUpPage.SingUpfakerVerification("name","email","password","password");
-        singUpPage.getCloseBtn().click();
-
-
-    }
-
-
 
 }

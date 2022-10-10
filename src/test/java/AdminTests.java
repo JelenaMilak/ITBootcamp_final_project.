@@ -27,6 +27,8 @@ public class AdminTests extends BaseTest {
         Assert.assertTrue(actualResult.endsWith("/admin/cities"));
     }
 
+    // Create new city and verify that the message contains text "Saved successfully".
+
     @Test(priority = 2)
 
     protected void newCity() throws InterruptedException {
@@ -48,6 +50,8 @@ public class AdminTests extends BaseTest {
         Assert.assertTrue(messageBox.getText().contains("Saved successfully"));
     }
 
+    // Edit the city from the previous test and verify that the message contains text "Saved successfully".
+
     @Test(priority = 3)
     public void editCity() {
         loginPage.getLoginBtn1().click();
@@ -60,7 +64,7 @@ public class AdminTests extends BaseTest {
         adminPage.getCityName().sendKeys(Keys.CONTROL + "A", Keys.DELETE);
         adminPage.getCityName().sendKeys("Luj-edited");
 
-        //wait.until(ExpectedConditions.visibilityOf(adminPage.getSaveBtn()));
+
         wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div[3]/div/div/div/div/div[1]"),
                 "Saved successfully\nCLOSE"));
         WebElement messageBox = driver.findElement(By.xpath("//*[@id='app']/div[5]/div/div/div[3]/button[2]/span"));
@@ -70,7 +74,7 @@ public class AdminTests extends BaseTest {
     }
 
 
-    @Test
+    @Test(priority = 4)
     protected void searchCity() throws InterruptedException {
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "12345");
@@ -79,14 +83,41 @@ public class AdminTests extends BaseTest {
 
         adminPage.searchCity();
 
-        Thread.sleep(7000);
-        String expected = driver.findElement(By.xpath(" //*[@id='app']/div[1]/main/div/div[2]/div/div[1]/div[2]/table/tbody/tr/td")).getText();
-        Assert.assertTrue(adminPage.getSearch().getText().contains(expected));
+        WebElement search = driver.findElement(By.id("search"));
+        search.clear();
+        WebElement city = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/main/div/div[2]/div/div[1]/div[2]/table/tbody/tr[1]/td[2]"));
+        search.sendKeys(city.getText());
+        Assert.assertTrue(city.isDisplayed());
+    }
+
+
+    @Test(priority = 5)
+    public void deleteCity() throws InterruptedException {
+        loginPage.getLoginBtn1().click();
+        loginPage.login("admin@admin.com", "12345");
+        homePage.getAdminBtn().click();
+        adminPage.getCityBtn().click();
+
+        WebElement city = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/main/div/div[2]/div/div[1]/div[2]/table/tbody/tr[1]/td[2]"));
+        WebElement search = driver.findElement(By.id("search"));
+        search.clear();
+        search.sendKeys(city.getText());
+
+        WebElement delete = driver.findElement(By.xpath("//*[@id=\"delete\"]/span"));
+        delete.click();
+
+        WebElement deleteDialog = driver.findElement(By.xpath("//*[@id=\"app\"]/div[5]/div/div/div[2]/button[2]/span"));
+        deleteDialog.click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div[1]/main/div/div[2]/div/div[3]/div/div/div/div/div[1]")));
+        WebElement message = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/main/div/div[2]/div/div[3]/div/div/div/div/div[1]"));
+        Assert.assertTrue(message.getText().contains("Deleted successfully"));
 
 
     }
-}
 
+
+}
 
 
 

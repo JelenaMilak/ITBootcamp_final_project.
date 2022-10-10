@@ -3,6 +3,7 @@ import org.testng.annotations.Test;
 
 public class AuthRouthTests extends BaseTest {
 
+    // Load the Home page and verify that the route/login appears in the url of the page
 
     @Test
     public void visitsToHomeUrl() {
@@ -12,6 +13,8 @@ public class AuthRouthTests extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
+    // Load the Profile page and verify that the route/login appears in the url of the page
+
     @Test
     public void visitsToProfileUrl() {
         String expectedResult = "/login";
@@ -20,6 +23,8 @@ public class AuthRouthTests extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
+    // Load the admin/cities page and verify that the route/login appears in the url of the page
+
     @Test
     public void visitsToAdminCitiesUrl() {
         String expectedResult = "/login";
@@ -27,6 +32,8 @@ public class AuthRouthTests extends BaseTest {
         String actualResult = driver.getCurrentUrl();
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
+
+    // Load the admin/users page and verify that the route/login appears in the url of the page
 
     @Test
     public void visitsToAdminUsersUrl() {

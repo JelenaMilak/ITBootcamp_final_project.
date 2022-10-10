@@ -1,13 +1,7 @@
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-
 import org.testng.annotations.Test;
 
 
@@ -78,6 +72,7 @@ public class LoginTests extends BaseTest {
     }
 
     // Displays errors when user does not exist
+
     @Test
 
     protected void fakerRandomLogin() {
@@ -99,14 +94,15 @@ public class LoginTests extends BaseTest {
     }
 
     // Displays errors when password is wrong
+
     @Test
     protected void wrongPassword() {
 
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "121233");
 
+
         loginPage.getLoginBtn().click();
-        //loginPage.wrongPassword("789456");
 
         WebElement closeBox = driver.findElement(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[4]/div/div/div/div"));
         WebElement closeBtn = driver.findElement(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[4]/div/div/div/div/div[1]/button"));
@@ -133,7 +129,9 @@ public class LoginTests extends BaseTest {
         loginPage.getLoginBtn1().click();
         wait.until(ExpectedConditions.elementToBeClickable(loginPage.getLoginBtn()));
         loginPage.login("admin@admin.com", "12345");
-        loginPage.getLoginBtn().click();
+
+        loginPage.checkLogout();
+
         Assert.assertTrue(homePage.isLogoutBtnPresent());
         loginPage.getLogoutBtn().click();
 

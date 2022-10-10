@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SingUpPage extends BasePage {
+public class SignUpPage extends BasePage {
     private By closeBtn = By.xpath("//*[@id='app']/div[4]/div/div/div[3]/button/span");
     private By importantBox = By.xpath("//*[@id='app']/div[4]/div/div");
     private By emailMessageBox = By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[3]/div/div/div/div/div[1]/ul/li");
@@ -17,7 +17,7 @@ public class SingUpPage extends BasePage {
 
     Faker faker = new Faker();
 
-    public SingUpPage(WebDriver driver, WebDriverWait driverWait) {
+    public SignUpPage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
     }
 

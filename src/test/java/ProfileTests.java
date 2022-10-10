@@ -7,24 +7,26 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class ProfileTest extends BaseTest{
+import static jdk.javadoc.internal.doclets.formats.html.markup.HtmlStyle.nameValue;
+
+public class ProfileTests extends BaseTest {
     @Test
     public void editProfileTest() throws InterruptedException {
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         homePage.getSingUpBtn().click();
         singUpPage.SingUp();
         driver.navigate().refresh();
-        singUpPage.SingUpfakerVerification("name","email","password","password");
+        singUpPage.SingUpfakerVerification("name", "email", "password", "password");
         singUpPage.getCloseBtn().click();
 
         homePage.getProfileBtn().click();
-        wait.until(ExpectedConditions.elementToBeClickable(profilePage.getContry()));
-        Thread.sleep(500);
 
-        profilePage.editFakerProfile("name","phone","city","contry","twiter","github","arrow");
+        wait.until(ExpectedConditions.elementToBeClickable(profilePage.getContry()));
+
+        profilePage.editFakerProfile("name", "phone", "city", "contry", "twiter", "github", "arrow");
 
         WebElement succMsg = driver.findElement(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[4]/div/div/div/div"));
-        String expectedResult ="Profile saved successfuly";
+        String expectedResult = "Profile saved successfuly";
         Assert.assertTrue(succMsg.getText().contains(expectedResult));
 
 

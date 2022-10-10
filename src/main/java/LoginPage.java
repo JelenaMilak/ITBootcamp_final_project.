@@ -2,20 +2,20 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
     private By logoutBtn = By.xpath("//*[@id='app']/div[1]/div/header/div/div[3]/button[2]");
     private By loginBtn = By.xpath("//*[@id='app']/div/main/div/div[2]/div/div/div[3]/span/form/div/div[3]/button");
     private By loginBtn1 = By.xpath("//*[@id='app']/div[1]/div/header/div/div[3]/a[3]");
     private By emailField = By.xpath("//*[@id='email']");
     private By passwordField = By.xpath("//*[@id='password']");
     private By singUpBtn = By.xpath("//*[@id='app']/div[1]/div/header/div/div[3]/a[4]");
-    Faker faker =new Faker();
+    Faker faker = new Faker();
+
     public LoginPage(WebDriver driver, WebDriverWait driverWait) {
         super(driver, driverWait);
     }
@@ -37,7 +37,6 @@ public class LoginPage extends BasePage{
     }
 
 
-
     public void setEmailField(By emailField) {
         this.emailField = emailField;
     }
@@ -55,36 +54,18 @@ public class LoginPage extends BasePage{
     }
 
 
-    public WebElement getSingUpBtn() {
-        return getDriver().findElement(singUpBtn);
-    }
-
-    public void setLoginBtn(By loginBtn) {
-        this.loginBtn = loginBtn;
-    }
-
-    public void setSingUpBtn(By singUpBtn) {
-        this.singUpBtn = singUpBtn;
-    }
-
-    private void loginClick(){
-        getLoginBtn1().click();
-    }
-    public void login(String email, String password){
+    public void login(String email, String password) {
         getEmailField().sendKeys(email);
         getPasswordField().sendKeys(password);
         getLoginBtn().click();
     }
-    public void waitUrl(){
+
+    public void waitUrl() {
         getDriverWait().until(ExpectedConditions.urlContains("/home"));
     }
-    public void waitUrlLogin(){
-        getDriverWait().until(ExpectedConditions.urlContains("/login"));
-    }
-   public Faker getFaker(){
-        return faker;
-    }
-    public void fakeLogin(){
+
+
+    public void fakeLogin() {
         String email = faker.internet().emailAddress();
         String password = faker.internet().password();
         getEmailField().click();
@@ -92,27 +73,15 @@ public class LoginPage extends BasePage{
         getPasswordField().click();
         getPasswordField().sendKeys(password);
         getLoginBtn().click();
+    }
 
 
-    }
-    public void wrongPassword( String pass){
-        getEmailField().sendKeys("admin@admin.com");
-        getPasswordField().sendKeys(pass);
-        if( pass !="12345"){
-            getLoginBtn().click();
-        }
-    }
     public void checkLogout() {
         List<WebElement> lista = getDriver().findElements(logoutBtn);
-        if (lista.size() != 0) {
+        if (lista.size() != 1) {
             getLogoutBtn().click();
         }
     }
-
-
-
-
-
 
 
 }

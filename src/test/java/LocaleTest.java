@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LocaleTest extends BaseTest {
+
+    // Set locale to ES.
     @Test
     public void setEsLanguage() {
         dashboard.getLangBtn().click();
@@ -15,6 +17,8 @@ public class LocaleTest extends BaseTest {
 
     }
 
+    //Set locale to EN.
+
     @Test
     public void setEnlanguage() {
         dashboard.getLangBtn().click();
@@ -25,6 +29,8 @@ public class LocaleTest extends BaseTest {
         Assert.assertEquals(actualResult, expectedResult);
 
     }
+
+    //Set locale to FR.
 
     @Test
     public void setFrlanguage() {
