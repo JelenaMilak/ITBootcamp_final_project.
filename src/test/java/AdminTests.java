@@ -15,7 +15,7 @@ public class AdminTests extends BaseTest {
 
     //Verify that admin button is present and url with rout :/admin/cities/
 
-    @Test(priority = 1)
+    @Test
     protected void enterAdminPage() {
 
         loginPage.getLoginBtn1().click();
@@ -29,7 +29,7 @@ public class AdminTests extends BaseTest {
 
     // Create new city and verify that the message contains text "Saved successfully".
 
-    @Test(priority = 2)
+    @Test
 
     protected void newCity() throws InterruptedException {
         loginPage.getLoginBtn1().click();
@@ -38,7 +38,7 @@ public class AdminTests extends BaseTest {
         adminPage.getCityBtn().click();
         adminPage.getNewItem().click();
 
-        adminPage.getCityName().sendKeys("Luj");
+        adminPage.getCityName().sendKeys("Mordor");
         adminPage.getSaveBtn().click();
 
         wait.until(ExpectedConditions.visibilityOf(adminPage.getSaveBtn()));
@@ -52,29 +52,31 @@ public class AdminTests extends BaseTest {
 
     // Edit the city from the previous test and verify that the message contains text "Saved successfully".
 
-    @Test(priority = 3)
-    public void editCity() {
+    @Test
+    public void editCity() throws InterruptedException {
+
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "12345");
         homePage.getAdminBtn().click();
         adminPage.getCityBtn().click();
+        String myCity = "Mordor";
+
+        adminPage.getSearch().sendKeys(myCity);
+        wait.until(ExpectedConditions.visibilityOf(adminPage.getEditBtn()));
         adminPage.getEditBtn().click();
+        adminPage.getCityName().sendKeys("Mordor-edited");
 
-
-        adminPage.getCityName().sendKeys(Keys.CONTROL + "A", Keys.DELETE);
-        adminPage.getCityName().sendKeys("Luj-edited");
-
-
+        wait.until(ExpectedConditions.visibilityOf(adminPage.getSaveBtn()));
         wait.until(ExpectedConditions.textToBe(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div[3]/div/div/div/div/div[1]"),
                 "Saved successfully\nCLOSE"));
-        WebElement messageBox = driver.findElement(By.xpath("//*[@id='app']/div[5]/div/div/div[3]/button[2]/span"));
-        Assert.assertTrue(messageBox.getText().contains("Saved successfully"));
 
-        profilePage.getSaveBtn().click();
+        adminPage.getSaveBtn().click();
+
+
     }
 
 
-    @Test(priority = 4)
+    @Test
     protected void searchCity() throws InterruptedException {
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "12345");
@@ -91,7 +93,7 @@ public class AdminTests extends BaseTest {
     }
 
 
-    @Test(priority = 5)
+    @Test
     public void deleteCity() throws InterruptedException {
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "12345");

@@ -4,27 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45e20309-96da-41d5-8ada-4409937acfa1" name="Changes" comment="Add Auth Routh Tests">
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="45e20309-96da-41d5-8ada-4409937acfa1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/AuthRoutesPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/ManuPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/SingUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/SignUpPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/AdminPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AdminTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AdminTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AuthRouthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AuthRouthTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LocaleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LocaleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/ProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/ProfileTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/SingUpTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/SignUpTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/AdminPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/AdminPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/AdminTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/AdminTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/LocaleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/LocaleTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/LoginTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/ProfileTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/SingUpTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/SingUpTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +42,31 @@
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.SignUpTests">
+  <component name="RunManager" selected="TestNG.AdminTests.editCity">
+    <configuration name="AdminTests.editCity" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ITBootcamp_final_project." />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AdminTests" />
+      <option name="METHOD_NAME" value="editCity" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminTests.newCity" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ITBootcamp_final_project." />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AdminTests" />
+      <option name="METHOD_NAME" value="newCity" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProfileTests.editProfileTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
@@ -80,30 +90,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignUpTests.CheckInputType" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ITBootcamp_final_project." />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SignUpTests" />
-      <option name="METHOD_NAME" value="CheckInputType" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SignUpTests.SingUp" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ITBootcamp_final_project." />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SignUpTests" />
-      <option name="METHOD_NAME" value="SingUp" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SignUpTests.SingUpVerification" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
@@ -118,11 +104,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AdminTests.editCity" />
+        <item itemvalue="TestNG.AdminTests.newCity" />
         <item itemvalue="TestNG.SignUpTests" />
         <item itemvalue="TestNG.SignUpTests.SingUpVerification" />
         <item itemvalue="TestNG.ProfileTests.editProfileTest" />
-        <item itemvalue="TestNG.SignUpTests.SingUp" />
-        <item itemvalue="TestNG.SignUpTests.CheckInputType" />
       </list>
     </recent_temporary>
   </component>
@@ -289,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665321169879</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Add Auth Routh Tests">
+      <created>1665428207535</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1665428207535</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -306,7 +299,8 @@
     <MESSAGE value="Commit 11." />
     <MESSAGE value="Commit 12" />
     <MESSAGE value="Commit 13" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 13" />
+    <MESSAGE value="Add Auth Routh Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Auth Routh Tests" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

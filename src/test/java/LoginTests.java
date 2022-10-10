@@ -93,7 +93,7 @@ public class LoginTests extends BaseTest {
 
     }
 
-    // Displays errors when password is wrong
+    // Displays errors when password is wrong.
 
     @Test
     protected void wrongPassword() {
