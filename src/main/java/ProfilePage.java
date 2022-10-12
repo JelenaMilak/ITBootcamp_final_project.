@@ -1,5 +1,6 @@
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,60 +22,13 @@ public class ProfilePage extends BasePage {
         super(driver, driverWait);
     }
 
-    public void setFaker(Faker faker) {
-        this.faker = faker;
-    }
 
     public WebElement getCityManu() {
         return getDriver().findElement(cityManu);
     }
 
-    public void setCityManu(By cityManu) {
-        this.cityManu = cityManu;
-    }
-
     public WebElement getArrow() {
         return getDriver().findElement(arrow);
-    }
-
-    public void setArrow(By arrow) {
-        this.arrow = arrow;
-    }
-
-    public void setEmail(By email) {
-        this.email = email;
-    }
-
-    public void setName(By name) {
-        this.name = name;
-    }
-
-    public void setPhone(By phone) {
-        this.phone = phone;
-    }
-
-    public void setCity(By city) {
-        this.city = city;
-    }
-
-    public void setContry(By contry) {
-        this.contry = contry;
-    }
-
-    public void setTwiter(By twiter) {
-        this.twiter = twiter;
-    }
-
-    public void setGitHub(By gitHub) {
-        this.gitHub = gitHub;
-    }
-
-    public void setSaveBtn(By saveBtn) {
-        this.saveBtn = saveBtn;
-    }
-
-    public WebElement getEmail() {
-        return getDriver().findElement(email);
     }
 
     public WebElement getName() {
@@ -85,9 +39,6 @@ public class ProfilePage extends BasePage {
         return getDriver().findElement(phone);
     }
 
-    public WebElement getCity() {
-        return getDriver().findElement(city);
-    }
 
     public WebElement getContry() {
         return getDriver().findElement(contry);
@@ -109,36 +60,27 @@ public class ProfilePage extends BasePage {
 
         name = faker.internet().domainName();
         phone = faker.phoneNumber().cellPhone();
-
-        city = faker.address().city();
-
         contry = faker.address().country();
         twiter = faker.internet().url();
         gitHub = faker.internet().url();
 
         getName().click();
         getName().sendKeys(name);
-        Thread.sleep(5000);
 
         getPhone().click();
         getPhone().sendKeys(phone);
-        Thread.sleep(5000);
 
         getArrow().click();
         getCityManu().click();
-        Thread.sleep(5000);
 
         getContry().click();
         getContry().sendKeys(contry);
-        Thread.sleep(5000);
 
         getTwiter().click();
         getTwiter().sendKeys("https://" + twiter);
-        Thread.sleep(5000);
 
         getGitHub().click();
         getGitHub().sendKeys("https://" + gitHub);
-        Thread.sleep(5000);
 
         getSaveBtn().click();
 

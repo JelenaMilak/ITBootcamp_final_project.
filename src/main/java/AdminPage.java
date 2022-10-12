@@ -25,15 +25,6 @@ public class AdminPage extends BasePage {
         super(driver, driverWait);
     }
 
-    public WebElement getMyCity() {
-        return getDriver().findElement(myCity);
-    }
-
-
-    public WebElement getMessageBox() {
-        return getDriver().findElement(messageBox);
-    }
-
     public WebElement getEditBtn() {
         return getDriver().findElement(editBitn);
     }
@@ -42,9 +33,6 @@ public class AdminPage extends BasePage {
         return getDriver().findElement(saveBtn);
     }
 
-    public void setSaveBtn(By saveBtn) {
-        this.saveBtn = saveBtn;
-    }
 
     public WebElement getNewItem() {
         return getDriver().findElement(newItem);
@@ -54,50 +42,17 @@ public class AdminPage extends BasePage {
         return getDriver().findElement(cityName);
     }
 
-    public void setNewItem(By newItem) {
-        this.newItem = newItem;
-    }
-
-    public void setCityName(By cityName) {
-        this.cityName = cityName;
-    }
-
-    public WebElement getAdminBtn() {
-        return getDriver().findElement(adminBtn);
-    }
 
     public WebElement getCityBtn() {
         return getDriver().findElement(cityBtn);
     }
 
-    public WebElement getUserBtn() {
-        return getDriver().findElement(userBtn);
-    }
-
-    public WebElement getLeftArrow() {
-        return getDriver().findElement(leftArrow);
-    }
-
-    public WebElement getRightArrow() {
-        return getDriver().findElement(rightArrow);
-    }
 
     public WebElement getSearch() {
         return getDriver().findElement(search);
     }
 
-    public void searchCity() {
-        getSearch().click();
-        getSearch().sendKeys("Morinj editedhophop");
 
 
-    }
 
-
-    public void searchMethod(String s) {
-        getAdminBtn().click();
-        getEditBtn().click();
-        getMyCity().click();
-        getMyCity().sendKeys("Bahami");
-    }
 }

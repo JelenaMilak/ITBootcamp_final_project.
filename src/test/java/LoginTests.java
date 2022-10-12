@@ -76,9 +76,10 @@ public class LoginTests extends BaseTest {
     @Test
 
     protected void fakerRandomLogin() {
+
         wait.until(ExpectedConditions.elementToBeClickable(loginPage.getLoginBtn1()));
         loginPage.getLoginBtn1().click();
-        loginPage.fakeLogin();
+        loginPage.getEmailField().click();
 
         WebElement closeBox = driver.findElement(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[4]/div/div/div/div"));
         WebElement closeBtn = driver.findElement(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[4]/div/div/div/div/div[1]/button"));
@@ -100,7 +101,7 @@ public class LoginTests extends BaseTest {
 
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "121233");
-
+        loginPage.fakeLogin();
 
         loginPage.getLoginBtn().click();
 
@@ -116,12 +117,7 @@ public class LoginTests extends BaseTest {
 
     }
 
-    /*  1.Verify that the logout button is visible on the page,
-        2.Verify that the /login route appears in the url of the page,
-        3.Verify that after trying to open the /home route, in the url
-          page reports /login route (open with driver.get home page and check
-          does it redirect you to login)
-    */
+
 
     @Test
     protected void logout() {
@@ -132,10 +128,10 @@ public class LoginTests extends BaseTest {
 
         loginPage.checkLogout();
 
-        Assert.assertTrue(homePage.isLogoutBtnPresent());
+        Assert.assertTrue(homePage.isLogoutBtnPresent()); // Logout button is visible on the page
         loginPage.getLogoutBtn().click();
 
-        String actualResult = "https://vue-demo.daniel-avellaneda.com/home";
+        String actualResult = "https://vue-demo.daniel-avellaneda.com/home"; //
         Assert.assertTrue(actualResult.endsWith("/home"));
 
 

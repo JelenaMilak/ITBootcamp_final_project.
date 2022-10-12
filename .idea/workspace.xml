@@ -4,13 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45e20309-96da-41d5-8ada-4409937acfa1" name="Changes" comment="">
+    <list default="true" id="45e20309-96da-41d5-8ada-4409937acfa1" name="Changes" comment="Clear page">
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/AdminPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/ManuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/SignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/SignUpPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AdminTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AdminTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AuthRouthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/AuthRouthTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LocaleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LocaleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/ProfileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/ProfileTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/SignUpTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/src/test/java/SignUpTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/AdminPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/AdminPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/ProfilePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/classes/ProfilePage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/AdminTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/AdminTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITBootcamp_final_project/target/test-classes/LoginTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +57,12 @@
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.AdminTests.editCity">
-    <configuration name="AdminTests.editCity" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ProfileTests.editProfileTest">
+    <configuration name="AdminTests.searchCity" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AdminTests" />
-      <option name="METHOD_NAME" value="editCity" />
+      <option name="METHOD_NAME" value="searchCity" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -55,11 +70,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminTests.newCity" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LocaleTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ITBootcamp_final_project." />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AdminTests" />
-      <option name="METHOD_NAME" value="newCity" />
+      <option name="MAIN_CLASS_NAME" value="LocaleTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.fakerRandomLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ITBootcamp_final_project." />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTests" />
+      <option name="METHOD_NAME" value="fakerRandomLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.wrongPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ITBootcamp_final_project." />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTests" />
+      <option name="METHOD_NAME" value="wrongPassword" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -79,36 +117,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignUpTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ITBootcamp_final_project." />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SignUpTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SignUpTests.SingUpVerification" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ITBootcamp_final_project." />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SignUpTests" />
-      <option name="METHOD_NAME" value="SingUpVerification" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AdminTests.editCity" />
-        <item itemvalue="TestNG.AdminTests.newCity" />
-        <item itemvalue="TestNG.SignUpTests" />
-        <item itemvalue="TestNG.SignUpTests.SingUpVerification" />
         <item itemvalue="TestNG.ProfileTests.editProfileTest" />
+        <item itemvalue="TestNG.AdminTests.searchCity" />
+        <item itemvalue="TestNG.LocaleTest" />
+        <item itemvalue="TestNG.LoginTests.wrongPassword" />
+        <item itemvalue="TestNG.LoginTests.fakerRandomLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -305,7 +320,7 @@
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" line="44">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/../ITBootcamp_final_project/src/main/java/LoginPage.java" line="35">
         <watch expression="((ById)((LoginPage)this).emailField).remoteParams" language="JAVA" custom="org.openqa.selenium.By.ById,LoginPage" />
       </inline-watch>
     </watches-manager>

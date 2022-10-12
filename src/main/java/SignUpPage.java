@@ -25,28 +25,8 @@ public class SignUpPage extends BasePage {
         return getDriver().findElement(closeBtn);
     }
 
-    public WebElement getSinbBtnDown() {
-        return getDriver().findElement(sinbBtnDown);
-    }
-
     public WebElement getImportantBox() {
         return getDriver().findElement(importantBox);
-    }
-
-    public void setImportantBox(By importantBox) {
-        this.importantBox = importantBox;
-    }
-
-    public WebElement getEmailMessageBox() {
-        return getDriver().findElement(emailMessageBox);
-    }
-
-    public void setEmailMessageBox(By emailMessageBox) {
-        this.emailMessageBox = emailMessageBox;
-    }
-
-    public void setFaker(Faker faker) {
-        this.faker = faker;
     }
 
     public WebElement getName() {
@@ -67,27 +47,6 @@ public class SignUpPage extends BasePage {
 
     public WebElement getSingBtn() {
         return getDriver().findElement(singBtn);
-    }
-
-
-    public void setName(By name) {
-        this.name = name;
-    }
-
-    public void setEmail(By email) {
-        this.email = email;
-    }
-
-    public void setPassword(By password) {
-        this.password = password;
-    }
-
-    public void setConfirmPassword(By confirmPassword) {
-        this.confirmPassword = confirmPassword;
-    }
-
-    public void setSingBtn(By singBtn) {
-        this.singBtn = singBtn;
     }
 
     public void SingUp() {
@@ -111,11 +70,6 @@ public class SignUpPage extends BasePage {
         getPassword().sendKeys("123654");
         getConfirmPassword().sendKeys("123654");
         getSingBtn().click();
-
-    }
-
-    public boolean isEmailMessageBoxPresent() {
-        return getEmailMessageBox().isDisplayed();
 
     }
 

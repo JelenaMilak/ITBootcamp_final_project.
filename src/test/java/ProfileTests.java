@@ -7,9 +7,11 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-import static jdk.javadoc.internal.doclets.formats.html.markup.HtmlStyle.nameValue;
 
 public class ProfileTests extends BaseTest {
+
+    // Random data using faker library and verify after save profile message contains the text "Profile saved successfuly".
+
     @Test
     public void editProfileTest() throws InterruptedException {
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -28,7 +30,6 @@ public class ProfileTests extends BaseTest {
         WebElement succMsg = driver.findElement(By.xpath("//*[@id='app']/div[1]/main/div/div[2]/div/div/div[4]/div/div/div/div"));
         String expectedResult = "Profile saved successfuly";
         Assert.assertTrue(succMsg.getText().contains(expectedResult));
-
 
     }
 }

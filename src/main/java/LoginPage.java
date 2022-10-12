@@ -28,31 +28,17 @@ public class LoginPage extends BasePage {
         return getDriver().findElement(loginBtn1);
     }
 
-    public void setLoginBtn1(By loginBtn1) {
-        this.loginBtn1 = loginBtn1;
-    }
-
     public WebElement getLoginBtn() {
         return getDriver().findElement(loginBtn);
-    }
-
-
-    public void setEmailField(By emailField) {
-        this.emailField = emailField;
     }
 
     public WebElement getEmailField() {
         return getDriver().findElement(emailField);
     }
 
-    public void setPasswordField(By passwordField) {
-        this.passwordField = passwordField;
-    }
-
     public WebElement getPasswordField() {
         return getDriver().findElement(passwordField);
     }
-
 
     public void login(String email, String password) {
         getEmailField().sendKeys(email);

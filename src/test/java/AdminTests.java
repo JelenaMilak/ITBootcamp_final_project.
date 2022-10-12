@@ -1,19 +1,14 @@
 
-
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static org.openqa.selenium.devtools.v102.log.Log.clear;
 
 public class AdminTests extends BaseTest {
 
-    //Verify that admin button is present and url with rout :/admin/cities/
+    // Verify that admin button is present and url with rout :/admin/cities/
 
     @Test
     protected void enterAdminPage() {
@@ -31,7 +26,7 @@ public class AdminTests extends BaseTest {
 
     @Test
 
-    protected void newCity() throws InterruptedException {
+    protected void newCity() {
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "12345");
         homePage.getAdminBtn().click();
@@ -53,7 +48,7 @@ public class AdminTests extends BaseTest {
     // Edit the city from the previous test and verify that the message contains text "Saved successfully".
 
     @Test
-    public void editCity() throws InterruptedException {
+    public void editCity() {
 
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "12345");
@@ -72,18 +67,16 @@ public class AdminTests extends BaseTest {
 
         adminPage.getSaveBtn().click();
 
-
     }
 
-
+    // Verify that the Name column of the first row contains the text from the search
     @Test
-    protected void searchCity() throws InterruptedException {
+
+    protected void searchCity() {
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "12345");
         homePage.getAdminBtn().click();
         adminPage.getCityBtn().click();
-
-        adminPage.searchCity();
 
         WebElement search = driver.findElement(By.id("search"));
         search.clear();
@@ -92,9 +85,10 @@ public class AdminTests extends BaseTest {
         Assert.assertTrue(city.isDisplayed());
     }
 
+    // Delete the selected text from the previous test and verify that the message contains the text "Deleted successfully".
 
     @Test
-    public void deleteCity() throws InterruptedException {
+    public void deleteCity() {
         loginPage.getLoginBtn1().click();
         loginPage.login("admin@admin.com", "12345");
         homePage.getAdminBtn().click();
@@ -115,10 +109,7 @@ public class AdminTests extends BaseTest {
         WebElement message = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/main/div/div[2]/div/div[3]/div/div/div/div/div[1]"));
         Assert.assertTrue(message.getText().contains("Deleted successfully"));
 
-
     }
-
-
 }
 
 

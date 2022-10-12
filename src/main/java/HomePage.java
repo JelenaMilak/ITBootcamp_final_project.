@@ -27,28 +27,12 @@ public class HomePage extends BasePage{
         return getDriver().findElement(singUpBtn);
     }
 
-    public void setSingUpBtn(By singUpBtn) {
-        this.singUpBtn = singUpBtn;
-    }
-
     public WebElement getLogoutBtn() {
         return getDriver().findElement(logoutBtn);
     }
 
-    public void setLogoutBtn(By logoutBtn) {
-        this.logoutBtn = logoutBtn;
-    }
-
-    public WebElement getHomeBtn() {
-        return getDriver().findElement(homeBtn);
-    }
-
-    public void  setHomeBtn(By homeBtn) {
-        this.homeBtn = homeBtn;
-    }
     public boolean isLogoutBtnPresent(){
         return getLogoutBtn().isDisplayed();
-
     }
     public boolean isAdminBtnPresent(){
         return getAdminBtn().isDisplayed();

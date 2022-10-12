@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class LocaleTest extends BaseTest {
 
-    // Set locale to ES.
+    // Set locale to ES and verify if the text appears in the header "Página de aterrizaje".
     @Test
     public void setEsLanguage() {
         dashboard.getLangBtn().click();
@@ -17,7 +17,7 @@ public class LocaleTest extends BaseTest {
 
     }
 
-    //Set locale to EN.
+    // Set locale to EN and verify if the text appears in the header "Landing".
 
     @Test
     public void setEnlanguage() {
@@ -30,8 +30,7 @@ public class LocaleTest extends BaseTest {
 
     }
 
-    //Set locale to FR.
-
+    // Set locale to FR nd verify if the text appears in the header "Page d'atterrissage".
     @Test
     public void setFrlanguage() {
         dashboard.getLangBtn().click();

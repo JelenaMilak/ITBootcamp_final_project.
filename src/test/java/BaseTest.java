@@ -1,3 +1,4 @@
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,7 +15,7 @@ public class BaseTest {
     protected HomePage homePage;
     protected SignUpPage singUpPage;
     protected AdminPage adminPage;
-    protected ManuPage dashboard;
+    protected MainPage dashboard;
     protected ProfilePage profilePage;
 
 
@@ -33,7 +34,7 @@ public class BaseTest {
         homePage = new HomePage(driver, wait);
         singUpPage = new SignUpPage(driver, wait);
         adminPage = new AdminPage(driver, wait);
-        dashboard = new ManuPage(driver, wait);
+        dashboard = new MainPage(driver, wait);
         profilePage = new ProfilePage(driver, wait);
     }
 
@@ -46,7 +47,7 @@ public class BaseTest {
 
     @AfterClass
     public void afterClass() {
-        //driver.quit();
+        driver.quit();
 
     }
 }

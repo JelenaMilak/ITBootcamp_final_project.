@@ -43,6 +43,5 @@ public class AuthRouthTests extends BaseTest {
         Assert.assertTrue(actualResult.contains(expectedResult));
     }
 
-
 }
 

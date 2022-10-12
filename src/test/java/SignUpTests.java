@@ -18,6 +18,8 @@ public class SignUpTests extends BaseTest {
 
     }
 
+    // Verify that the e-mail input field has the value email and verify that the password input field has the value password.
+
     @Test
     protected void CheckInputType() {
         homePage.getSingUpBtn().click();
@@ -33,7 +35,8 @@ public class SignUpTests extends BaseTest {
 
     }
 
-    //Displays errors when user already exists
+    // Displays errors when user already exists
+
     @Test
     protected void AlreadyUser() {
 
@@ -50,6 +53,8 @@ public class SignUpTests extends BaseTest {
         closeBox.click();
 
     }
+
+    // Verify that the logout button is visible on the page and verify that the route/login appears in the url of the page.
 
     @Test
     protected void singUpVerification() {
